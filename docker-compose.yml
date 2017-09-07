@@ -1,0 +1,17 @@
+version: '3'
+services:
+  eureka-server:
+    build: ./my-eureka-server/
+    ports:
+      - "8761:8761"
+  ip-service-1:
+    build: ./simple-springboot-service/
+  ip-service-2:
+      build: ./simple-springboot-service/
+  ip-service-3:
+      build: ./simple-springboot-service/
+
+  client-load-balance:
+    build: ./client-load-balance/
+    ports:
+      - "9080:8080"

@@ -1,0 +1,12 @@
+spring:
+    application:
+        name: client-load-balance
+
+#
+ip-service:
+  ribbon:
+    eureka:
+      defaultZone: http://eureka-server:8761/eureka/
+  #    defaultZone: http://localhost:8761/eureka/
+#      ServerListRefreshInterval: 1000
+    ServerListRefreshInterval: 1000
