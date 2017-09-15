@@ -1,16 +1,19 @@
 package com.example.clientloadbalance;
 
+import org.springframework.stereotype.Service;
+
 import java.util.List;
 
 /**
- * Created by Andriy_Brezetskyy on 9/7/2017.
+ * @author Andriy Brezetskyy
  */
+public interface IpService {
 
-public interface IpStatisticRepository {
 
     List<String> getIps();
 
     void clear();
 
     String call();
+
 }

@@ -14,23 +14,23 @@ import java.util.List;
 public class IpServiceCallerController {
 
     @Autowired
-    private IpStatisticRepository ipStatistic;
+    private IpService service;
 
 
 
     @GetMapping("stat")
     public List<String> getIps() {
-        return ipStatistic.getIps();
+        return service.getIps();
     }
 
     @GetMapping("clear")
     public void cleanStatisic() {
-        ipStatistic.clear();
+        service.clear();
     }
 
     @GetMapping("call")
-    public void call() {
-        ipStatistic.call();
+    public String call()  {
+        return service.call();
     }
 
 

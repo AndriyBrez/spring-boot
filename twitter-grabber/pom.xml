@@ -4,11 +4,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.example</groupId>
-	<artifactId>simple-springboot-service</artifactId>
+	<artifactId>twitter-grabber</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>simple-springboot-service</name>
+	<name>twitter-grabber</name>
 	<description>Demo project for Spring Boot</description>
 
 	<parent>
@@ -16,6 +16,8 @@
 		<artifactId>my-spring-boot</artifactId>
 		<version>1.0</version>
 	</parent>
+
+
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
@@ -23,7 +25,23 @@
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-hateoas</artifactId>
+			<artifactId>spring-boot-starter-thymeleaf</artifactId>
 		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-rest</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-mongodb</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-social-twitter</artifactId>
+		</dependency>
+
 	</dependencies>
+
 </project>

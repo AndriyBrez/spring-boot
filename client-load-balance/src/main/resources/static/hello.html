@@ -1,0 +1,24 @@
+<html>
+<head>
+    <title>Hello My Load Balancer</title>
+    <script type="text/javascript" src="https://unpkg.com/vue"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue-resource@1.3.4"></script>
+
+</head>
+<body>
+
+    <div id="app">
+        <h4>{{ message }} </h4>
+
+        <button v-on:click="getIpList">Get Ip</button>
+
+        <button v-on:click="callService">Call Service</button>
+
+        <button v-on:click="clearIpList">Clear Ip List</button>
+        <h4>{{ callResponse }} </h4>
+
+    </div>
+
+<script type="text/javascript" src="script.js"></script>
+</body>
+</html>

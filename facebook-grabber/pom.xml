@@ -4,26 +4,30 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.example</groupId>
-	<artifactId>simple-springboot-service</artifactId>
+	<artifactId>facebook-grabber</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>simple-springboot-service</name>
+	<name>facebook-grabber</name>
 	<description>Demo project for Spring Boot</description>
 
+	
 	<parent>
 		<groupId>com.exampl</groupId>
 		<artifactId>my-spring-boot</artifactId>
 		<version>1.0</version>
 	</parent>
+
+
 	<dependencies>
 		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-eureka</artifactId>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-social-facebook</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-hateoas</artifactId>
+			<artifactId>spring-boot-starter-thymeleaf</artifactId>
 		</dependency>
 	</dependencies>
+
 </project>

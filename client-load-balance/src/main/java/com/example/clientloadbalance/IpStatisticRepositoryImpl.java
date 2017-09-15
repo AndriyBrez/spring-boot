@@ -5,7 +5,6 @@ import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.cloud.netflix.ribbon.RibbonClient;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
@@ -42,10 +41,20 @@ public class IpStatisticRepositoryImpl implements IpStatisticRepository {
         ips.clear();
     }
 
+    private boolean throwExeption = false;
 
-    @Scheduled(fixedDelay = 10000)
-    public void call(){
-        String ip = restTemplate.getForObject("http://ip-service/ips", String.class);
+    @Override
+    public String call(){
+        if (throwExeption){
+            throwExeption = false;
+            throw  new RuntimeException("doesnt call");
+        }else {
+            throwExeption = true;
+        }
+
+        //String ip = restTemplate.getForObject("http://ip-service/ips", String.class);
+        String ip = "from the repository";
         ips.add(ip);
+        return ip;
     }
 }
